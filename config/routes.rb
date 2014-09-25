@@ -5,6 +5,10 @@ PersonalSite::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resources :contacts, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

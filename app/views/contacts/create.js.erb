@@ -1,0 +1,6 @@
+var message = "<%= j @message %>"
+if (message == 'error'){
+    $('#contact-form').html("<div class='form-response'>Opps! There has been an error please try again later</div>");
+}else {
+    $('#contact-form').html("<div class='form-response'>Thanks for you message, I'll get back to you really soon</div>");
+}

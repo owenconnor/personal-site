@@ -2,36 +2,332 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@mixin linear-gradient($fromColor, $toColor)
+  background-color: $toColor /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor) /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor) /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor) /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+
 body
   width: 100%
   margin: auto
+  font-family: 'Open Sans', sans-serif
+  //background-color: #262b37
+
+// section headings
+.heading
+  text-align: center
+  font-family: 'Open Sans',sans-serif
+  font-size: 36px
+  font-weight: 300
+  line-height: 38px
+  margin: 0
+  padding: 1em 0 1em 0
+  text-transform: uppercase
+  .sub-heading
+    font-family: 'Open Sans',sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 21px
+    margin: 0
+    padding-bottom: 22px
+
+
+// list item elements
+.items
+  width: 80%
+  margin: auto
+  .item-wrapper
+    //border: solid 1px #2E2F30
+    .item
+      padding: 0 0 0 0
+      .date-section
+        display: inline-block
+        //border-right: solid 1px #2E2F30
+        width: 20%
+        .date-circle
+          margin: auto
+          width: 150px
+          height: 150px
+          border-radius: 150px
+          -webkit-border-radius: 150px
+          -moz-border-radius: 150px
+          background-color: #ff675f
+    .date-text
+      font-size: 17px
+      font-weight: 300
+      color: #ffffff
+      vertical-align: bottom
+      text-align: center
+      padding-top: 2.5em
+    .item-box
+      display: inline-block
+      vertical-align: top
+      border-left: solid 1px #D6D6D6
+      width: 70%
+      padding: 0 0 4em 0
+      .item-description
+        display: inline-block
+        background-color: #eeeeee
+        width: 100%
+        //height: 10em
+        padding: 2em 2em .5em 2em
+        margin-left: 3em
+        position: relative
+        border-bottom: solid 2px #DBDBDB
+      .item-description:after
+        right: 100%
+        top: 30%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+        border-color: rgba(238, 238, 238, 0)
+        border-right-color: #eeeeee
+        border-width: 18px
+        margin-top: -30px
+      .item-name
+        font-size: 19px
+        font-weight: 700
+        color: #474d5d
+        padding: 0 0 .5em 0
+      .item-sub-heading
+        padding: 0 0 .5em 0
+        color: #474d5d
+        font-size: 16px
+        font-weight: 400
+      .module-list
+        display: inline-block
+        width: 40%
+        vertical-align: top
+      .item-details
+        color: #84868d
+        h4
+          color: #474d5d
+          padding: 0 0 0.5em 0
+          margin: 0
+        p
+          padding: 0 0 1em 0
+          margin: 0
+        ul
+          padding: 0 0 0 2em
+          list-style: none
+        ul li:before
+          color: #474d5d /* set color to red */
+          content: "\2022" /* /2022 is the numerical unicode for &bull; */
+          font-size: 1.5em /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+          padding-right: .25em /* give the bullet some padding from the text Make sure to use em*/
+          position: relative
+          top: .2em /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+
+        .item-details-extended
+          padding: 1em 0 1em 0
+          display: none
+        .plus-button
+          color: #00bdbd
+          font-size: 3em
+          text-align: right
+          //padding: 1em 0 0 0
+        .minus-button
+          color: #00bdbd
+          font-size: 3em
+          text-align: right
+          display: none
+//padding: 1em 0 0 0
+
+.section
+  width: 100%
+  padding: 2em 0 6em 0
 
 #section-hero
-  background-color: green
   width: 100%
-  height: 20em
-
+  height: 45em
+  color: #ffffff
+  display: inline-flex
+  background: linear-gradient(rgba(27, 31, 43, 0.6), rgba(27, 31, 43, 0.6)), url(homepage/development.jpg)
+  background-size: contain
+  //background-attachment: scroll
   #hero-text
-    display: block
+    width: 70%
     border: solid #ffffff 1px
     margin: auto
     text-align: center
+    padding:  2em 0 2em 0
+    margin: auto auto
+    #hero-lead-text
+      font-family: 'Open Sans',sans-serif
+      font-size: 80px
+      font-weight: 700
+      line-height: 90px
+      margin: 0
+      padding-bottom: 8px
+    #hero-sub-text
+      font-family: 'Open Sans',sans-serif
+      font-size: 36px
+      font-weight: 300
+      line-height: 38px
+      margin: 0
+      padding-bottom: 0
+      text-transform: uppercase
+#section-about-me
+  color: #ffffff
+  background-color: #00bdbd
+  #about-me-content
+    width: 80%
+    margin: auto
+    .about-me-half-1
+      vertical-align: top
+      width: 70%
+      //border: 1px solid #f00
+      display: inline-block
+      #about-me-lead
+        font-family: 'Open Sans',sans-serif
+        font-size: 24px
+        font-weight: 400
+        line-height: 30px
+        margin: 0
+        padding-bottom: 6px
+      #about-me-sub-lead
+        font-size: 18px
+        font-weight: 600
+        padding-bottom: 1em
+      #about-me-text
+        width: 100%
+      #about-me-description
+        font-family: 'Open Sans',sans-serif
+        font-size: 14px
+        font-weight: 400
+        line-height: 21px
+        margin: 0
+        padding: 0 7em 22px 0
+      .btnDownload
+        background: none repeat scroll 0 0 #474d5d
+        display: inline-block
+        font-family: 'Open Sans',sans-serif
+        font-size: 16px
+        font-weight: 700
+        padding: 16px 22px
+        text-decoration: none
+      .btnDownload:visited
+        text-decoration: none
+        color: #ffffff
+    .about-me-half-2
+      //vertical-align: top
+      width: 25%
+      //border: 1px solid #f00
+      display: inline-block
+      #personal-image
+        position: relative
+        top: 2em
+        margin: auto
+        width: 275px
+        height: 275px
+        border-radius: 150px
+        -webkit-border-radius: 150px
+        -moz-border-radius: 150px
+        background: url(homepage/owen2.jpg) no-repeat
+#section-technical-skills
+  //height: 70em
+  overflow: hidden
+  background-color: #E8E8E8
+  .heading
+    color: #ff675f
+  #section-wrap
+    width: 80%
+    margin: auto
+    .skill-wrap
+      display: inline-block
+      width: 33%
+      //border: 1px solid #f00
+      vertical-align: top
+      //float: left
+      .skill-section
+        //position: relative
+        padding: 2em 0 2em 0
+        color: #999999
+        //width: 30%
+        //display: inline-block
+        .skill-logos
+          display: block
+          width: 80%
+          //background-color: grey
+          margin: auto
+          font-size: 6em
+        .icon
+          margin: auto
+          width: 25%
+          color: grey
+        .fa-cloud-upload
+          text-align: center
+        .skill-name
+          font-family: 'Montserrat',sans-serif,Arial
+          font-size: 14px
+          line-height: 1em
+          padding: 0 0 1em 0
+          color: #2E2F30
+          text-align: center
+        .skill-text
+          margin: auto
+          display: block
+          width: 80%
+          height: 6em
+          padding: 0 0 0 0
+          text-align: center
+          font-size: 16px
+          line-height: 25px
+          height: 6em
+          //min-height: 20em
+        .skill-text-extended
+          margin: auto
+          display: none
+          width: 80%
+          height: 6em
+          padding: 0 0 0 0
+          text-align: center
+          font-size: 16px
+          line-height: 25px
+#section-work-experience
+  .heading
+    color: #ff675f
+    .item-details
+      color: #84868d
+#section-education
+  background-color: #E8E8E8
+  .heading
+    color: #ff675f
+  .item-description
+    background-color: #ffffff
+  .item-description:after
+    border-right-color: #ffffff
+#section-contact
+  background-color: #474d5d
+  color: #ffffff
+  .heading
+    color: #ff675f
+  #contact-wrapper
+    width: 80%
+    margin: auto
+    #contact-details
+      width: 25%
+      display: inline-block
+      .contact-line
+        .icon
+          padding: 0 1em 0 0
+          display: inline-block
+        p
+          display: inline-block
+    #contact-form
+      display: inline-block
 
-  #hero-lead-text
-    font-family: 'Open Sans',sans-serif
-    font-size: 80px
-    font-weight: 700
-    line-height: 90px
-    margin: 0
-    padding-bottom: 8px
 
-  #hero-sub-text
-    font-family: 'Open Sans',sans-serif
-    font-size: 36px
-    font-weight: 300
-    line-height: 38px
-    margin: 0
-    padding-bottom: 0
-    text-transform: uppercase
+
 
 

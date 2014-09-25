@@ -1,0 +1,13 @@
+= form_for contacts, remote:true do |f|
+  - if contacts.errors.any?
+    %ul
+      - contacts.errors.full_messages.each do |msg|
+        %li= msg
+  .form-row1
+    = f.text_field :name, :placeholder => "Your name..."
+  .form-row1
+    = f.text_field :email, :placeholder => "Your email..."
+  #form-row2
+    = f.text_area :message, :placeholder => "Your message..."
+  %div
+    = f.submit "Send", :id => "send-button"

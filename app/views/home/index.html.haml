@@ -1,92 +1,271 @@
 #section-hero
   #hero-text
     #hero-lead-text I'm Owen Connor
-    #hero-sub-text Great web development
-#section-about-me
-  #about-me-text
-    #about-me-lead
-      About Me
-    #about-me-content
-      I am a versatile, hands-on developer with 3 years’ experience with a proven ability to identify, analyse & solve problems, deal with clients and manage projects from conception to delivery. Having spent 8 years in sales prior to returning to web development I possess a business acumen  and appreciation of commercial sensitivities rarely found in a developer. My background has made me passionate about buidling ﻿web applications that automate and improve business processes and improve peoples lives.
-      I joined Storyful in 2011 in order to effect a change in the way news was generated. Over the past three years we have had  a huge imapct on the news industry and we continue to innovate every day, something of which I am immensely proud.
-#section-technical-skills
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-  .skill-section
-    .skill-logos
-      =image_tag "skill-logos/ror.png", :width => "50px", :height => "100px"
-    .skill-text
-      Here here is lots of info about this  particular skill set
-#section-work-experience
-  #jobs
-    .job
-      .item-year
-      .item-button
-      .item-text-content
-        .item-title Storyful
-        .item-date
-        .item-subheader
-        .item-description
-          .item-link
-    .job
-      .item-year
-      .item-button
-      .item-text-content
-        .item-title Storyful
-        .item-date
-        .item-subheader
-        .item-description
-          .item-link
-#section-education
-  #courses
-    .course
-      .item-year
-      .item-button
-      .item-text-content
-        .item-title Masters
-        .item-date
-        .item-subheader
-        .item-description
-          .item-link
-    .course
-      .item-year
-      .item-button
-      .item-text-content
-        .item-title Higher Diploma
-        .item-date
-        .item-subheader
-        .item-description
-          .item-link
-    .course
-      .item-year
-      .item-button
-      .item-text-content
-        .item-title Diploma SCD
-        .item-date
-        .item-subheader
-        .item-description
-          .item-link
-#section-contact
+    #hero-sub-text I build web tools
+.section#section-about-me
+  .heading
+    About Me
+    .sub-heading
+      A small introduction about myself
+  #about-me-content
+    .about-me-half-1
+      #about-me-text
+        #about-me-lead
+          Owen Connor
+        #about-me-sub-lead
+          Web Developer from Dublin
+        #about-me-description
+          %p I am a versatile, hands-on developer with 3 years’ experience with a proven ability to identify, analyse & solve problems, deal with clients and manage projects from conception to delivery. Having spent 8 years in sales prior to returning to web development I possess a business acumen  and appreciation of commercial sensitivities rarely found in a developer. My background has made me passionate about buidling ﻿web applications that automate and improve business processes and improve peoples lives.
+          %p I joined Storyful in 2011 in order to effect a change in the way news was generated. Over the past three years we have had  a huge imapct on the news industry and we continue to innovate every day, something of which I am immensely proud.
+        =link_to "Download Printable Resume", root_path, :class => "btnDownload"
+    .about-me-half-2
+      #personal-image
+.section#section-technical-skills
+  .heading
+    Technical Skills
+    .sub-heading
+      what I can do
+  #section-wrap
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            =image_tag "homepage/rails.png"
+          .skill-name
+            Ruby & Rails
+        .skill-text
+          At the core of my work is a proficiency in Ruby on Rails. I have a passion for backend ruby development.
+        .skill-text-extended
+          Coupled frameworks such as Rails and Sinatra I am able to create software that enhances efficiency and user/customer experience.
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            .fa.fa-html5.icon
+          .skill-name
+            HTML & HAML
+        .skill-text
+          I love building sites in Haml, it's elegant and tidy and always my first choice. If needs be I can fall back to HTML
+        .skill-text-extended
+          Haml allows me to create lean and digestable templates which are easier to refactor, debug and maintain.
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            =image_tag "homepage/sass-logo.png"
+          .skill-name
+            CSS & SASS
+        .skill-text
+          I have developed an knowledge in CSS with which I can effectively style web applications.
+        .skill-text-extended
+          More recently I have turned to SASS as its much more DRY and powerful than standard CSS.
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            .fa.fa-jsfiddle.icon
+          .skill-name
+            Javascript
+        .skill-text
+          I have worked hard over the past few years to improve my Javascript to the point that I can achieve most tasks required.
+        .skill-text-extended
+          During my time with Storyful I have worked with JQuery and Backbone extensively and have experience with Angular.
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            .fa.fa-check-circle.icon
+          .skill-name
+            Test Driven Development
+        .skill-text
+          While adding features to key applications it's important that we take care not to break any existing features.
+        .skill-text-extended
+          A comprehensive test suite which is added to all the time is a prerequisite for this
+    .skill-wrap
+      .skill-section
+        .skill-logos
+          .icon
+            .fa.fa-cloud-upload.icon
+          .skill-name
+            Deployment
+          .skill-text
+            A key element in the success of any application is ease and reliablity of deployment.
+          .skill-text-extended
+            I have experience in configuring deployments to heroku and to VPS's using Capistrano.
+.section#section-work-experience
+  .heading
+    Work Experience
+    .sub-heading
+      Where I have been before
+  .items
+    .item-wrapper
+      .item
+        .date-section
+          .date-circle
+            .date-text
+              Dec 2011
+              %br to present
+        .item-box
+          .item-description
+            .item-name Storyful
+            .item-sub-heading Ruby on Rails Developer
+            .item-details
+              Storyful is the first news agency of the social media age. Storyful’s Newswire allows newsrooms to quickly and accurately source breaking news on the social web. I joined Storyful after completing my Higher Diploma and have gained valuable experience in an amazing startup enviroment
+              .item-details-extended
+                %h4 Role
+                %p Over the past three years in Storyful I have been involved in many projects and have had many duties. I have worked closely with Journalists on the improving efficiencies in the publishing CMS, with partners in delivering content via API, MRSS and custom methods and with end users in improving the UI of story templates. All of this goes hand in hand with ongoing maintanance and support of current systems. I have a pivotal role in testing and debugging within the dev team as my experience with these application is significantly greater than most.
+                %h4 Acheivements
+                Some of the things I am most proud of in Storyful include:
+                %ul
+                  %li Greatly streamlining the process for a journalist to create and publish a story, decreasing the time required by automating many tasks. As well as introducing a publishing workflow.
+                  %li Working with companies like MSN and Yahoo to configure and automate the ingestion of Storyful content directly to their delivery platforms.
+                  %li Implementing the autogeneration of client emails from storyful content based on client requirements. This saved journalists over an hour a day
+              .plus-button
+                .fa.fa-plus-circle
+              .minus-button
+                .fa.fa-minus-circle
+      .item
+        .date-section
+          .date-circle
+            .date-text
+              2002
+              %br to 2010
+        .item-box
+          .item-description
+            .item-name Sales Career
+            .item-sub-heading Various Sales Roles
+            .item-details
+              After intially leaving college I embarked upon a career in Sales. Over 8 years I worked for organisation selling software and SAAS products. Over that time I project managed numerous implementations in both the private and public sector. The skills gained over this period have enabled me to take a deep commercial understanding to my development roles
+              .item-details-extended
+                %h4 Roles
+                %p Over this time I worked for companies including Imagine Telecom, pTools, Sam360
+                %h4 Acheivements
+                A number of achievements over that time which speak to my skills are:
+                %ul
+                  %li Successfully winning public sector tenders worth in excess of 250k
+                  %li Managing a team of 12 salespeople
+                  %li Project managing the implementation of software projects using SMART and PRINCE2 values
+              .plus-button
+                .fa.fa-plus-circle
+              .minus-button
+                .fa.fa-minus-circle
+.section#section-education
+  .heading
+    Education
+    .sub-heading
+      What I have learned
+  .items
+    .item-wrapper
+      .item
+        .date-section
+          .date-circle
+            .date-text
+              May 2011
+              %br to April 2012
+        .item-box
+          .item-description
+            .item-name MSc in Web Technologies
+            .item-sub-heading National College of Ireland
+            .item-details
+              This course gave me the opportunity to develop outstanding expertise in all facets of web development. The course was practical in nature and provided with an understanding of how to design, create, test, debug and maintain web applications to be deployed distributively across multiple hosting platforms and VPS's. The thesis project allowed me the opportunity to develop a complex application from conception to delivery. The thesis is available here and the code is on github.
+              .item-details-extended
+                %h4 Modules
+                .module-list
+                  %ul
+                    %li Deployment
+                    %li Enterprise Frameworks
+                    %li Usability Testing and Implementation
+                    %li Web Application Frameworks
+                .module-list
+                  %ul
+                    %li Advanced Client Side Scripting
+                    %li Advanced Rich Internet Applications
+                    %li Cloud Computing
+                    %li Technology Entrepreneurship
+                %h4 Project
+                Masters project
+              .plus-button
+                .fa.fa-plus-circle
+              .minus-button
+                .fa.fa-minus-circle
+      .item
+        .date-section
+          .date-circle
+            .date-text
+              Sept 2010
+              %br to May 2011
+        .item-box
+          .item-description
+            .item-name Higher Diploma in Science in Web Technologies
+            .item-sub-heading National College of Ireland
+            .item-details
+              The Higher Diploma provided the basis to improve and modernise my skills utilising modern web technologies. The course will give them the opportunity to develop expertise in modern programming principles, languages and frameworks. and  The programme gave an understanding  & practical introduction of how to create rich internet web applications.
+              .item-details-extended
+                %h4 Modules
+                .module-list
+                  %ul
+                    %li Client Side Web Technologies
+                    %li Intro to Computing & Web Technologies
+                    %li Server Side Technologies
+                .module-list
+                  %ul
+                    %li Rich Internet Applications
+                    %li Web Application Development
+                %h4 Project
+                HDip project
+              .plus-button
+                .fa.fa-plus-circle
+              .minus-button
+                .fa.fa-minus-circle
+      .item
+        .date-section
+          .date-circle
+            .date-text
+              Sept 2000
+              %br to May 2002
+        .item-box
+          .item-description
+            .item-name Diploma in Multimedia Design
+            .item-sub-heading Senior College Dun Laoghaire
+            .item-details
+              This course provided a grounding in what were at the time the most prevalent technologies in web development and multimedia creation for the web. Whilst basic and outdated looking now this diploma laid the foundation for my understanding and love of web development and has helped me enormasly over the years
+              .item-details-extended
+                %h4 Modules
+                .module-list
+                  %ul
+                    %li HTML & CSS
+                    %li Javascript
+                .module-list
+                  %ul
+                    %li Visual Basic
+                    %li Shockwave & Flash
+              .plus-button
+                .fa.fa-plus-circle
+              .minus-button
+                .fa.fa-minus-circle
+.section#section-contact
+  .heading
+    Contact Me
+    .sub-heading
+      Shoot me a message
+  #contact-wrapper
+    #contact-details
+      .contact-line
+        .fa.fa-map-marker.icon
+        %p Ringsend, Dublin 4, Ireland
+      .contact-line
+        .fa.fa-mobile.icon
+        %p +353 (0)86 0737004
+      .contact-line
+        .fa.fa-envelope-o.icon
+        %p hello at owenconnor.net
+      .contact-line
+        .fa.fa-github.icon
+        %p github: owenconnor
+      //.contact-line
+      //  .fa.fa-twitter.icon
+      //  %p twitter: @owenconnor
+    #contact-form
+      #form-container
+        = render 'form', :contacts => @contact
+
