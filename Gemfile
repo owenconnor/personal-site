@@ -47,7 +47,14 @@ end
 gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano'
+
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'capistrano'
+  # cap tasks to manage puma application server
+  gem 'capistrano-rails',   '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-rvm',   '~> 0.1', require: false
+end
