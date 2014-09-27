@@ -1,10 +1,10 @@
-root = "/home/deployer/apps/personal-site/current"
+root = "/home/deployer/apps/personal-site_production/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-listen "/var/sockets/unicorn.personal-site.sock"
+listen "/var/sockets/unicorn.personal-site_production.sock"
 worker_processes 2
 timeout 30
 
