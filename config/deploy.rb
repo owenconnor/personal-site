@@ -1,4 +1,4 @@
-set :application, 'personal-site_production'
+set :application, 'personal-site'
 set :deploy_user, 'deployer'
 set :scm, :git
 set :repo_url, 'git@github.com:owenconnor/personal-site.git'
