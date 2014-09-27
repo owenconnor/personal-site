@@ -20,6 +20,7 @@ $(document).ready(function() {
         $(this).closest(".skill-section").find(".skill-text").hide();
         $(this).closest(".skill-section").find(".skill-text").fadeIn('fast');
         $(this).closest(".skill-section").find(".skill-text-extended").fadeIn('fast');
+        $(this).closest(".skill-section").find(".skill-name").css({"color": "#ffffff"});
         $(this).closest(".skill-section").find(".skill-name").fadeIn('fast');
     });
 
@@ -30,6 +31,7 @@ $(document).ready(function() {
         $(this).closest(".skill-section").find(".skill-name").hide();
         $(this).closest(".skill-section").find(".skill-text").fadeIn(400);
         $(this).closest(".skill-section").find(".icon").fadeIn(400);
+        $(this).closest(".skill-section").find(".skill-name").css({"color": "#2E2F30"});
         $(this).closest(".skill-section").find(".skill-name").fadeIn(400);
 
     });
