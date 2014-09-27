@@ -24,11 +24,11 @@ unicorn_init.sh
 set(:symlinks, [
     {
         source: "nginx.conf",
-        link: "/etc/nginx/sites-enabled/{{full_app_name}}"
+        link: "/etc/nginx/sites-enabled/default"
     },
     {
         source: "unicorn_init.sh",
-        link: "/etc/init.d/unicorn_{{full_app_name}}"
+        link: "/etc/init.d/unicorn_personal-site_prodcution"
     }
 ])
 # this:
