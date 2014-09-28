@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+$information-phone: "only screen and (max-width : 600px)"
 
 @mixin linear-gradient($fromColor, $toColor)
   background-color: $toColor /* Fallback Color */
@@ -137,6 +137,7 @@ body
           color: #00bdbd
           font-size: 3em
           text-align: right
+          cursor: pointer
           //padding: 1em 0 0 0
         .minus-button
           color: #00bdbd
@@ -188,8 +189,11 @@ body
     .about-me-half-1
       vertical-align: top
       width: 70%
-      //border: 1px solid #f00
       display: inline-block
+      @media #{$information-phone}
+        vertical-align: top
+        width: 100%
+        display: block
       #about-me-lead
         font-family: 'Open Sans',sans-serif
         font-size: 24px
@@ -210,6 +214,8 @@ body
         line-height: 21px
         margin: 0
         padding: 0 7em 22px 0
+        @media #{$information-phone}
+          padding: 0 1em 22px 0
       .btnDownload
         background: none repeat scroll 0 0 #474d5d
         display: inline-block
@@ -331,8 +337,6 @@ body
           display: inline-block
     #contact-form
       display: inline-block
-
-
 
 
 
