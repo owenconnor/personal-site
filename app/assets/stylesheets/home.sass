@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$information-phone: "only screen and (min-width : 980px) and (orientation: portrait)"
+$information-phone: "only screen and (max-width : 980px) and (orientation: portrait)"
 
 @mixin linear-gradient($fromColor, $toColor)
   background-color: $toColor /* Fallback Color */
@@ -170,7 +170,8 @@ body
   color: #ffffff
   display: inline-flex
   background: linear-gradient(rgba(27, 31, 43, 0.6), rgba(27, 31, 43, 0.6)), url(homepage/development.jpg)
-  background-size: contain
+  background-repeat: no-repeat
+  background-size: cover
   //background-attachment: scroll
   #hero-text
     width: 70%
@@ -345,7 +346,7 @@ body
       width: 25%
       display: inline-block
       @media #{$information-phone}
-        width: 35%
+        width: 50%
         margin: auto
         display: block
       .contact-line
