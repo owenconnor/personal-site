@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$information-phone: "only screen and (max-width : 600px)"
+$information-phone: "only screen and (min-width : 980px) and (orientation: portrait)"
 
 @mixin linear-gradient($fromColor, $toColor)
   background-color: $toColor /* Fallback Color */
@@ -43,14 +43,20 @@ body
 .items
   width: 80%
   margin: auto
+  @media #{$information-phone}
+    width: 100%
   .item-wrapper
-    //border: solid 1px #2E2F30
     .item
       padding: 0 0 0 0
+      @media #{$information-phone}
+        align-content: center
       .date-section
         display: inline-block
-        //border-right: solid 1px #2E2F30
         width: 20%
+        @media #{$information-phone}
+          display: block
+          padding: 0 0 2em 0
+          margin: auto
         .date-circle
           margin: auto
           width: 150px
@@ -72,15 +78,20 @@ body
       border-left: solid 1px #D6D6D6
       width: 70%
       padding: 0 0 4em 0
+      @media #{$information-phone}
+        display: block
+        width: 90%
+        border: none
       .item-description
         display: inline-block
         background-color: #eeeeee
         width: 100%
-        //height: 10em
         padding: 2em 2em .5em 2em
         margin-left: 3em
         position: relative
         border-bottom: solid 2px #DBDBDB
+        @media #{$information-phone}
+          margin-left: 1em
       .item-description:after
         right: 100%
         top: 30%
@@ -94,6 +105,9 @@ body
         border-right-color: #eeeeee
         border-width: 18px
         margin-top: -30px
+        @media #{$information-phone}
+          border: none
+          right: 0
       .item-name
         font-size: 19px
         font-weight: 700
@@ -231,14 +245,15 @@ body
       .btnDownload:hover
         color: #ff675f
     .about-me-half-2
-      //vertical-align: top
       width: 25%
-      //border: 1px solid #f00
+      @media #{$information-phone}
+        width: 100%
+        margin: auto
       display: inline-block
       #personal-image
+        margin: auto
         position: relative
         top: 2em
-        margin: auto
         width: 275px
         height: 275px
         border-radius: 150px
@@ -254,22 +269,22 @@ body
   #section-wrap
     width: 80%
     margin: auto
+    @media #{$information-phone}
+      width: 100%
+      align-content: center
     .skill-wrap
       display: inline-block
       width: 33%
-      //border: 1px solid #f00
       vertical-align: top
-      //float: left
+      @media #{$information-phone}
+        width: 47%
+        padding-left: 2%
       .skill-section
-        //position: relative
         padding: 2em 0 2em 0
         color: #999999
-        //width: 30%
-        //display: inline-block
         .skill-logos
           display: block
           width: 80%
-          //background-color: grey
           margin: auto
           font-size: 6em
         .icon
@@ -329,6 +344,10 @@ body
     #contact-details
       width: 25%
       display: inline-block
+      @media #{$information-phone}
+        width: 35%
+        margin: auto
+        display: block
       .contact-line
         .icon
           padding: 0 1em 0 0
