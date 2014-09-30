@@ -66,12 +66,15 @@ body
           -moz-border-radius: 150px
           background-color: #ff675f
     .date-text
-      font-size: 17px
+      font-size: 1.3em
       font-weight: 300
       color: #ffffff
       vertical-align: bottom
       text-align: center
-      padding-top: 2.5em
+      padding-top: 2.8em
+      @media #{$information-phone}
+        font-size: 1.5em
+        padding-top: 1.6em
     .item-box
       display: inline-block
       vertical-align: top
@@ -80,7 +83,7 @@ body
       padding: 0 0 4em 0
       @media #{$information-phone}
         display: block
-        width: 90%
+        width: 80%
         border: none
       .item-description
         display: inline-block
@@ -91,7 +94,7 @@ body
         position: relative
         border-bottom: solid 2px #DBDBDB
         @media #{$information-phone}
-          margin-left: 1em
+          padding: 5%
       .item-description:after
         right: 100%
         top: 30%
@@ -107,7 +110,7 @@ body
         margin-top: -30px
         @media #{$information-phone}
           border: none
-          right: 0
+          //right: 0
       .item-name
         font-size: 19px
         font-weight: 700
@@ -122,6 +125,10 @@ body
         display: inline-block
         width: 40%
         vertical-align: top
+        @media #{$information-phone}
+          display: block
+          font-size: 1em
+          width: 80%
       .item-details
         color: #84868d
         h4
@@ -134,6 +141,8 @@ body
         ul
           padding: 0 0 0 2em
           list-style: none
+          @media #{$information-phone}
+            font-size: 1em
         ul li:before
           color: #474d5d /* set color to red */
           content: "\2022" /* /2022 is the numerical unicode for &bull; */
@@ -147,12 +156,15 @@ body
         .item-details-extended
           padding: 1em 0 1em 0
           display: none
+          @media #{$information-phone}
+            display: block
         .plus-button
           color: #00bdbd
           font-size: 3em
           text-align: right
           cursor: pointer
-          //padding: 1em 0 0 0
+          @media #{$information-phone}
+            display: none
         .minus-button
           color: #00bdbd
           font-size: 3em
@@ -233,13 +245,24 @@ body
           padding: 0 1em 22px 0
       .btnDownload
         background: none repeat scroll 0 0 #474d5d
-        display: inline-block
+        display: block
         font-family: 'Open Sans',sans-serif
-        font-size: 16px
+        font-size: 1.3em
         font-weight: 700
-        padding: 16px 22px
+        padding: 1em 1.6em
         text-decoration: none
         color: #84868d
+        width: 35%
+        text-align: center
+        @media #{$information-phone}
+          font-size: 2em
+          font-weight: 700
+          padding: 1.5em 1.8em
+          text-align: center
+          margin: auto
+          width: 60%
+          margin-bottom: 2em
+          margin-top: 1em
       .btnDownload:visited
         text-decoration: none
         color: #ffffff
@@ -278,8 +301,10 @@ body
       width: 33%
       vertical-align: top
       @media #{$information-phone}
-        width: 47%
+        display: block
+        width: 80%
         padding-left: 2%
+        margin: auto
       .skill-section
         padding: 2em 0 2em 0
         color: #999999
@@ -288,6 +313,8 @@ body
           width: 80%
           margin: auto
           font-size: 6em
+          @media #{$information-phone}
+            font-size: 8em
         .icon
           margin: auto
           width: 25%
@@ -296,11 +323,13 @@ body
           text-align: center
         .skill-name
           font-family: 'Montserrat',sans-serif,Arial
-          font-size: 14px
+          font-size: 0.25em
           line-height: 1em
           padding: 0 0 1em 0
           color: #2E2F30
           text-align: center
+          @media #{$information-phone}
+            color: #474d5d
         .skill-text
           margin: auto
           display: block
@@ -308,19 +337,34 @@ body
           height: 6em
           padding: 0 0 0 0
           text-align: center
-          font-size: 16px
+          font-size: 1.2em
           line-height: 25px
           height: 6em
-          //min-height: 20em
+          @media #{$information-phone}
+            display: block
+            font-size: 2em
+            line-height: 1.2em
+            width: 70%
+            height: inherit
+            text-align: justify
+            text-justify: inter-word
         .skill-text-extended
           margin: auto
           display: none
           width: 80%
           height: 6em
-          padding: 0 0 0 0
+          padding: 1em 0 0 0
           text-align: center
-          font-size: 16px
+          font-size: 1en
           line-height: 25px
+          @media #{$information-phone}
+            display: block
+            font-size: 2em
+            line-height: 1.2em
+            width: 70%
+            height: inherit
+            text-align: justify
+            text-justify: inter-word
 #section-work-experience
   .heading
     color: #ff675f
