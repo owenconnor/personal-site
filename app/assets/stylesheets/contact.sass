@@ -1,24 +1,29 @@
-$information-phone: "only screen and (min-width : 200px) and (orientation: portrait)"
+$information-phone: "only screen and (max-width : 980px) and (orientation: portrait)"
 
 #contact-form
   width: 60%
-  padding: 0 0 0 10em
+  padding: 0 0 0 3em
   vertical-align: top
+  display: inline-block
   @media #{$information-phone}
-    width: 90%
+    width: 75%
     padding: 0
   #form-container
     width: 100%
-    #contact-details
+    @media #{$information-phone}
+      margin-left: 22%
+      margin-right: 22%
     .form-row1
-      width: 46%
+      width: 37.6%
       display: inline-block
+      margin-right: 10%
       @media #{$information-phone}
-        display: block
         width: 100%
+        display: block
+        //margin: auto
       #contact_name
-        width: 85%
-        font-size: 1.2em
+        width: 100%
+        font-size: 18px
         font-style: italic
         color: #93959c
         //line-height: 20px
@@ -26,37 +31,41 @@ $information-phone: "only screen and (min-width : 200px) and (orientation: portr
         background: none repeat scroll 0 0 #585f73
         outline: medium none
         border: medium none
-        margin-right: 10%
         @media #{$information-phone}
-          width: 100%
+          width: 80%
+          margin: auto
       #contact_email
-        margin-left: 10%
-        width: 85%
-        font-size: 1.2em
+        width: 100%
+        font-size: 18px
         font-style: italic
         color: #93959c
+        //line-height: 20px
         padding: 1em 2em
         background: none repeat scroll 0 0 #585f73
         outline: medium none
         border: medium none
+        margin-left: 10%
         @media #{$information-phone}
-          margin: 0
-          width: 100%
+          width: 80%
           margin-top: 1em
-    #contact_message
-      width: 91%
-      font-size: 1.2em
-      font-style: italic
-      color: #93959c
-      line-height: 20px
-      padding: 1em 2em
-      background: none repeat scroll 0 0 #585f73
-      outline: medium none
-      border: medium none
-      margin-top: 2em
+          margin-left: 0
+    #form-row2
+      width: 100%
       @media #{$information-phone}
-        width: 100%
-
+      #contact_message
+        width: 89.5%
+        font-size: 18px
+        font-style: italic
+        color: #93959c
+        line-height: 20px
+        padding: 1em 2em
+        background: none repeat scroll 0 0 #585f73
+        outline: medium none
+        border: medium none
+        margin-top: 2em
+        @media #{$information-phone}
+          width: 80%
+          margin-top: 1em
     #send-button
       background: none repeat scroll 0 0 #ff675f
       color: #fff
@@ -69,9 +78,10 @@ $information-phone: "only screen and (min-width : 200px) and (orientation: portr
       outline: medium none
       border: medium none
       padding: 0.5em 1em 0.5em 1em
+      @media #{$information-phone}
+        float: none
     .form-response
       font-size: 2em
       text-align: center
-    .form-response
       h3
         font-size: 5em
